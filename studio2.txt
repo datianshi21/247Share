@@ -1,0 +1,58 @@
+Studio 2 write up
+
+Your TA's name:
+Yan Tong
+
+
+Students in your studio group:
+
+    Name        Student ID (begins with a 4)
+	
+1.Zuyan Jiang    446225
+2.Shuyu Wang	 446285
+3.Tianran Shi    445101
+4.
+5.
+6.
+
+Below each question, type in your short, to-the-point answers.
+
+Part A
+
+What do you see in the plots for ticks and time?
+Ans: A quadratic line, which resembles f(n) = 1/2*n^2 + 5/2*n + 1.
+
+How would you characterize those curves?
+Ans: This curve means that the time complexity is O(n^2).
+
+Based on the current code for addLast, why do you see this behavior?
+Ans: Because each time we add one node to the list, we have to loop up all the previous nodes,
+it takes n times. And we add the nodes to the list n times. Hence, the time complexity should
+be O(n^2).
+Part B
+
+What behavior do you see now for appending n items to a list if you use a tail reference?
+Ans: The line becomes a leaner line. And hence, the time complexity becomes O(n) instead of
+O(n^2).
+
+While we have reasoned so far only about time, if we are adding n elements to the end of a list, what is the asymptotic complexity of the additional space required when using the tail reference?
+Ans: It should be theta (n), because each time we add a node, we only create one space. 
+Under what conditions would you recommend using a linked list with a tail reference vs. a linked list without at tail reference?
+Ans: If the input size is extremely big or the CPU frequency is low, we need to use the linked list with a tail reference.
+Part C
+
+Why does getSize() take the time it does?
+Ans: Because we have to look up all the nodes in the list, so it takes O(n) times.
+How did you achieve Θ(1) performance for getSize()?
+Ans: We use a count to store the length of the array. We this time, we just need to return the 
+counter which just is one time.
+
+Part D
+<1> It's true.
+Since f(n) is O(g(n)), there exists c and n0, that when n > n0, f(n) <= c*g(n).
+Hence, f(n) <= (c-1)*g(n), which equals to f(n) + g(n) <= c*g(n).
+Since f(n) is )(g(n)), there exists c and n0, that when n > n0, c(f(n) + g(n)) >= g(n).
+Hence, f(n) + g(n) is omega g(n).
+
+<2> f(n)/g(n) <= c, hence f(n) <= c*g(n)).
+	f(n>/g(n) <=1, f(n) <= 1/c*g(n).
